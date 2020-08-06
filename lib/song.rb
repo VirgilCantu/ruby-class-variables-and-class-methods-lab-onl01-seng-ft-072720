@@ -30,7 +30,7 @@ attr_accessor :name, :artist, :genre
   end
 
   def self.genre_count
-    genres_count = {}
+    @@genres_histogram = {}
     @@genres.each do |genre|
       if @@genres_histogram[genre] == nil
         @@genres_histogram[genre] = 1
@@ -41,7 +41,7 @@ attr_accessor :name, :artist, :genre
   end
 
   def self.artist_count
-    artists_count = {}
+    @@artists_histogram = {}
     @@artists.each do |artist|
       if @@artists_histogram[artist] == nil
         @@artists_histogram[artist] = 1
